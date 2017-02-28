@@ -1,25 +1,26 @@
 #include "queue.h"
+#include "hashed.h"
 #define ptoqueue queued* 
 #define ptoarr ptoqueue*
 int main(){
 	ptoqueue *arr= (ptoqueue *)malloc(20*sizeof(queued*));
 	// need to initialize these to NULL 	
 	int i;
+	// check	
+	// for(i=0;i<20;i++){
+	// 	arr[i]=(queued *)malloc(sizeof(queued));
+	// 	arr[i]->first=NULL;
+	// 	arr[i]->rear=NULL;
+	// }	
 	
-	for(i=0;i<20;i++){
-		arr[i]=(queued *)malloc(sizeof(queued));
-		arr[i]->first=NULL;
-		arr[i]->rear=NULL;
-	}	
+	// for(i=0;i<20;i++){
+	// 	queue_add(arr[i],i);
+	// }
 	
-	for(i=0;i<20;i++){
-		queue_add(arr[i],i);
-	}
-	
-	for(i=0;i<20;i++){
-		print_list(arr[i]);
-		printf("\n");
-	}
+	// for(i=0;i<20;i++){
+	// 	print_list(arr[i]);
+	// 	printf("\n");
+	// }
 	
 	ptoarr* arrarr = (ptoarr*)malloc(8*sizeof(ptoarr));
 	

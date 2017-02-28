@@ -3,9 +3,12 @@
 void queue_add(queued *head, int ele){
 	node* link = (node*)malloc(sizeof(node));
 	link->element=ele;
+	
+
 	if(head->count==0){
 		head->rear=link	;
 		head->first=link;
+		// printf("%s\n",);
 	}
 	else{	
 		head->rear->next=link ;
@@ -13,6 +16,8 @@ void queue_add(queued *head, int ele){
 		head->rear=link;
 	}
 	head->count++;
+	head->rear->counter= head->count;
+	// free(link);
 }
 
 node *queue_rem(queued *head){
@@ -33,26 +38,15 @@ void print_list(queued * head){
 	}	
 }
 
-int search(queued *head, int ele){
+node * search(queued *head, int ele){
 	node* ptr=head->first;
 	int flag=0;
 	while(ptr!=NULL){
-		if(ptr->element >ele){
+		if(ptr->element==ele){
 			flag=1;
-			break ;
+			return ptr;
 		}
 		ptr = ptr->next;
 	}	
-	return flag;
+	// return flag;
 }
-
-vishal 10
-varun 12
-tushar 13
-hrithik 2
-chinmay 22
-ankit 69
-raghav 90
-storm 6
-stoned 3
-nolah 4

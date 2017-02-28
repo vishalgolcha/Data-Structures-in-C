@@ -4,6 +4,7 @@
 typedef struct node{
 	struct node * next;
 	int element;
+	int counter;
 } node;
 
 typedef struct queued{
@@ -15,4 +16,4 @@ typedef struct queued{
 void queue_add(queued *head, int ele);
 node* queue_rem(queued *head);
 void print_list(queued * head);
-int search(queued *head,int ele);
+node * search(queued *head,int ele);

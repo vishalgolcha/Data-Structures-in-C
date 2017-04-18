@@ -38,7 +38,7 @@ int partition(int lo,int hi){
 	int y=hi;
 	swap(piv,hi);
 	hi--;
-	if(lo==hi){ // idhar galti thi chutiye 
+	if(lo==hi){ // idhar galti thi chu sale
 		if(p[lo].x>p[y].x){
 			swap(y,lo);
 			return lo ;

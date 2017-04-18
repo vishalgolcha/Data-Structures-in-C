@@ -12,6 +12,7 @@ void swap(int x,int y){
 	p[x]=p[y];
 	p[y]=temp;
 }
+
 int partition(int lo,int hi){
 	int piv=hi;//pivot(lo,hi);
 	int y=hi;

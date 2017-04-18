@@ -46,13 +46,3 @@ int search(queued *head, int ele){
 	return flag;
 }
 
-vishal 10
-varun 12
-tushar 13
-hrithik 2
-chinmay 22
-ankit 69
-raghav 90
-storm 6
-stoned 3
-nolah 4
